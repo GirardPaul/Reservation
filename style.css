@@ -1,0 +1,197 @@
+*{
+    font-family: 'Bebas Neue', cursive;
+}
+body{
+    margin:0;
+    font-size: 1rem;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    height: 100vh;
+    background-image: url(images/campus1.jpg);
+    background-size: cover;
+}
+a{
+    text-decoration: none !important;
+}
+
+
+
+
+/* Header */
+
+
+.mt-resa{
+    margin-top: 5rem !important;
+}
+.navbar {
+  overflow: hidden;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 85%;
+  z-index: 2000;
+}
+.navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* .navbar a:hover {
+  background: #ddd;
+  color: black;
+} */
+.margin_header{
+    margin-top: 5rem;
+}
+.fs-42{
+    font-size: 4.2rem;
+}
+.fs-2{
+    font-size: 2rem;
+}
+.font-w-700{
+    font-weight: 700;
+}
+.color-red{
+    color: #ea272d;
+}
+.fs-80{
+    font-size: 7.4rem;
+}
+.fs-30{
+    font-size: 3rem;
+}
+
+
+
+/* Présentation */
+
+
+
+
+.presentation{
+
+    background-color: #FFF;
+}
+.color-red{
+    color: #ea272d;
+}
+.btn_presentation{
+    border: 2px solid  #ea272d;
+    border-color: #ea272d !important;
+    font-size: 2rem !important;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    color: #ea272d !important;
+}
+.img_presentation{
+    width: 100%;
+    height: auto;
+}
+.title-chef{ 
+    font-size: 2.3rem; 
+    text-transform: uppercase; 
+    letter-spacing: .5em; 
+    font-weight: 300;
+}
+.font_visiteurs{
+
+    font-size: 4.5rem; 
+    font-weight: 300; 
+    line-height: 1.1;
+}
+.text_chef{
+    font-size: 2rem !important;
+}
+
+
+
+/* Menu */
+
+.menu{
+    background-color: #FFF;
+}
+
+/* Offres */
+
+.offres{
+    background-image: url(images/bg_4.jpg);
+    color: #f8f9fa!important
+}
+.offres-title{
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    font-weight: 300;
+}
+.lead{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.font_offres{
+    font-size: 5.5rem; 
+    font-weight: 300; 
+    line-height: 1.1;
+}
+.price{
+    color: #ea272d;
+    font-size: 5rem;
+    }
+.contenu_menu{
+    color: #ea272d;
+    font-size: 2.5rem;
+}
+.student{
+    color: orange; 
+    font-size: 2.5rem;
+}
+
+/* Réalisation */
+
+.realisation{
+   
+        background-image: url(images/bg_4.jpg);
+        color: #f8f9fa!important
+}
+
+/* Contact */
+
+.btn-danger:hover {
+    color: #fff !important;
+    background-color: #ea272d !important;
+    border-color: #ea272d !important;
+}
+
+
+
+@media screen and (min-width: 769px){
+    .w-lg-25{
+        width: 25% !important;
+    }
+    .outer-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        display:none;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+.padding_media {
+    padding: 0 !important;
+}
+}
