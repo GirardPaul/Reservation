@@ -130,7 +130,7 @@ a{
 }
 .img_presentation{
     width: 100%;
-    height: auto;
+
 }
 .title-chef{ 
     font-size: 2.3rem; 
@@ -196,7 +196,16 @@ a{
     font-size: 2rem !important;
 }
 .mt-resa{
-    margin-top: 6rem;
+    margin-top: 7rem !important;
+}
+.pb-submit{
+    padding-bottom: 2rem !important;
+}
+.center-resa{
+    position: absolute !important;
+    top: 40% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
 }
 
 /* Réalisation */
@@ -222,13 +231,13 @@ a{
         width: 25% !important;
     }
     .outer-menu{
-        display: none;
+        display: none !important;
     }
 }
 
 @media screen and (max-width: 768px){
     .navbar{
-        display:none;
+        display: none !important;
     }
 }
 
@@ -245,7 +254,7 @@ a{
 
 .card-menu {display: flex; height: 400px;width: 200px;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
   
-  .card-menu:not(:first-child) { margin-left: -50px;}
+
   
   .card-menu:hover {transform: translateY(-20px);transition: 0.4s ease-out;}
   
@@ -279,7 +288,7 @@ a{
 /**** media queries ****/
 
 @media (max-width: 575.98px) { 
-  .card-menu {display: flex; height: 400px;width: 450px;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
+  .card-menu {display: flex; height: 400px;width: 30rem;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
 
  
  }

@@ -6,7 +6,6 @@ require_once('Menu.php');
 
 // Nouvelle instance de Menu
 $ajoutMenu = new Menu();
-
 ?>
 
 
@@ -18,32 +17,82 @@ $ajoutMenu = new Menu();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Réservation repas</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Pacifico&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <!-- Your custom styles (optional) -->
-	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reservation.css">
-  <link rel="stylesheet" href="css/selectbox.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="burger.css">
-	<script src="js/selectbox.min.js"></script>
+    <link rel="stylesheet"  href="style.css">
+  <link rel="stylesheet"  href="burger.css">
+  <link rel="stylesheet" href="mb_css/bootstrap.min.css">
+  <link rel="stylesheet" href="mb_css/mdb.min.css">
+  <link rel="stylesheet" href="mb_css/mdb.lite.min.css">
+  <link rel="stylesheet" href="mb_css/style.css">
+  
+  <style>
+
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    pointer-events: initial !important;
+    opacity: 0;
+}
+.btn-blue-grey {
+    color: #fff;
+    background-color: #414141 !important;
+}
+.btn-blue-grey:hover {
+    color: #fff !important;
+   
+}
+input[type="text"]
+ {
+    display: block !important;
+    width: 100% !important;
+    height: calc(1.5em + .75rem + 2px) !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #495057 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+.caret{
+  display: none !important;
+}
+.md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea{
+  width: 95% !important;
+}
+@media screen and (max-width: 768px){
+    .navbar{
+        display: none !important;
+    }
+}
+  </style>
+
+  <script src="mb_js/bootstrap.min.js"></script>
+  <script src="mb_js/jquery.min.js"></script>
+  <script src="mb_js/mdb.min.js"></script>
+  <script src="mb_js/mdb.lite.min.js"></script>
+  <script src="mb_js/popper.min.js"></script>
+
+  <script>
+
+// Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});
+
+  </script>
+
   </head>
 
-  <body style="background-color: #eddec3;">
+  <body>
 
   <section>
         <!--  NavBar   -->
-        <div class="navbar bg-dark">
+        <div class="navbar d-flex justify-content-center align-items-center bg-dark">
             <a href="index.php">Accueil</a>
             <a href="index.php#presentation">La Chef</a>
             <a href="index.php#menu">Menu</a>
@@ -73,86 +122,99 @@ $ajoutMenu = new Menu();
             </div>
           </div>
     </section>
-    <div class="container mt-resa">
 
 
-      <!-- Section: Block Content -->
-      <section class="dark-grey-text">
 
-        <h3 class="text-center font-weight-bold mb-4 pb-2">Réservez vos repas !</h3>
-        <!-- <p class="text-center text-muted w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p> -->
 
-        <!-- Grid row -->
-        <div class="row">
 
-          <!-- Grid column -->
-          <div class="col-lg-5 mb-lg-0 mb-5 text-center">
 
-            <img src="img/cuisine.jpg" class="img-media" alt="">
 
-          </div>
-          <!-- Grid column -->
 
-          <!-- Grid column -->
-          <div class="col-lg-7 d-flex">
-            <form action="traitement_resa.php" method="post">
 
-		<?php
-		  	$today = strftime("%Y-%m-%d", strtotime("now"));
-			  $endDate = strftime("%Y-%m-%d", strtotime("+12 day"));
 
-			$resa = $ajoutMenu->DatePeriode($today, $endDate);
+          <div class="container center-resa mt-resa">
+            
+            <h1 class="text-center font-weight-bold mb-4 pb-2">Réservez vos repas !</h1>
 
-			setlocale(LC_TIME, "fr_FR","French");
+<div class="row flex-column justify-content-center align-items-center">
+  <form class="d-flex flex-column justify-content-center align-items-center col-6" action="" method="POST">
 
-			while ($row = $resa->fetch()) {
+<?php
+    $today = strftime("%Y-%m-%d", strtotime("now"));
+    $endDate = strftime("%Y-%m-%d", strtotime("+12 day"));
 
-			$date = strftime("%A %d %B %G", strtotime($row['date']));
-			
-			echo "<div class='form-flex-1'>";
-			echo "<ul class='ks-cboxtags'> <li class=''>";
-			echo "<input class='form-control w-35' type='checkbox' name='azer[]' value='".$date."'>";
-			echo "<label class='' for='azer[]'>".$date."</label>";
-			echo "</li></ul>";
+  $resa = $ajoutMenu->DatePeriode($today, $endDate);
 
-			echo "<select id='' class='justselect' name='select_menu[]'>";
+  setlocale(LC_TIME, "fr_FR","French");
 
-			echo "<option value='Choississez un menu' selected disabled>Choississez un menu</option>";
-			echo "<option value='Entrée / Plat'>Entrée / Plat</option>";
-			echo "<option value='Plat / Dessert'>Plat / Dessert</option>";
-			echo "<option value='Menu complet'>Menu complet</option>";
-			echo "</select>";
-			echo "</div>";
-			}
-      ?>
-      <div class="form-flex-2">
+  echo '<select name="azer[]" class="w-100 mdb-select md-form" multiple="multiple">';
+  echo '<option value="" disabled selected> Sélection dates :</option>';
+  while ($row = $resa->fetch()) {
 
-        <select name="formule" class="justselect">
-          <option value="Choix de l'offre" disabled selected>Choix de l'offre</option>
-          <option value="Formule étudiant">Formule étudiant</option>
-          <option value="Formule standard">Formule standard</option>
-        </select>
+  $date = strftime("%A %d %B %G", strtotime($row['date']));
+  
 
-        <?php
-        echo $ajoutMenu->AddMenu('nom');
-        echo $ajoutMenu->AddMenu('prenom');
-        echo $ajoutMenu->AddMenu('mail');
+  echo "<option value='".$date."'>".$date."</option>";
+
+  }
+
+
+
+  ?>
+  </select>
+  <input type="submit" name="submit" class="btn-save btn btn-blue-grey" value="Save">
+  </form>
+                <form class="d-flex flex-column justify-content-center align-items-center col-6" action="traitement_resa.php" method="POST">
+                <?php
+
+if(isset($_POST['azer'])){
+  ?>
+                <table class="table">
+                <thead class="thead-info">
+                    <tr>
+                        <th class="text-center" scope="col">Date</th>
+                        <th class="text-center" scope="col">Formule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+
+                      <?php
+
+                      for ($i=0; $i < count($_POST['azer']) ; $i++) { 
+                        echo "<tr><td><input class='w-100' style='border: none; outline: none;' type='text' name='day[]' readonly='readonly'
+                        value='".$_POST['azer'][$i]."'></td><td><select class='w-100 form-control' name='select_menu[]'><option value='Choississez un menu' selected disabled>Choississez un menu</option><option value='Entrée / Plat'>Entrée / Plat</option><option value='Plat / Dessert'>Plat / Dessert</option><option value='Menu complet'>Menu complet</option></select></td></tr>";
+                      }
+                    }
+                      ?>
+                </tbody>
+                </table>
+
+                <?php
+                if(isset($_POST['submit'])){
+                ?>
+                 <h2 class="text-center font-weight-bold mb-4 pb-2">Renseignez vos coordonnées</h2>
+
+                <select name="formule" class="w-50 mb-4 form-control justselect">
+                <option value="Choix de l'offre" disabled selected>Choix de l'offre</option>
+                <option value="Formule étudiant">Formule étudiant</option>
+                <option value="Formule standard">Formule standard</option>
+                </select>
+
+                <?php
+              
+
+                
+                  echo $ajoutMenu->AddMenu('nom');
+                  echo $ajoutMenu->AddMenu('prenom');
+                  echo $ajoutMenu->AddMenu('mail'); 
+                  echo '<input class="w-auto form-control pb-submit btn btn-blue-grey" type="submit" value="Réserver">';
+                }
         ?>
-        
-        <input class="w-auto form-control btn btn-elegant" type="submit" value="Réserver">
-        </form>
-      </div>
+  </form>
+</div>
+</div>
 
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </section>
-      <!-- Section: Block Content -->
-
-    </div>
   </body>
 
 </html>

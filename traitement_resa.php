@@ -5,10 +5,12 @@ require_once('database.php');
 require_once('Menu.php');
 
 
+
 echo "Vous avez réservé un repas pour les jours suivants :";
 
 $formule = $_POST['formule'];
-$jour = $_POST['azer']; $choix = $_POST['select_menu']; 
+$jour = $_POST['day']; 
+$choix = $_POST['select_menu']; 
 $test = array_combine($jour, $choix); 
 $reservation = ""; 
 foreach ($test as $key => $value) {
@@ -79,8 +81,7 @@ if($_POST) {
 
       $client = mail($mail_client, $subject, $confirmation);
 
-		if ($mail_magellan) { echo "Votre message a été envoyé avec succès !"; }
-      else { echo "Une erreur est survenue, veuillez réessayer s'il vous plaît."; }
+		if ($mail_magellan) { header('location: index.php'); }
 		
 	} # end if - no validation error
 
