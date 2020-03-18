@@ -169,7 +169,7 @@ a{
     font-weight: 300;
 }
 .lead{
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
     font-weight: 300;
 }
 .font_offres{
@@ -188,6 +188,15 @@ a{
 .student{
     color: orange; 
     font-size: 2.5rem;
+}
+.margin-resa{
+    margin-top: 10rem !important;
+}
+.fs-resa{
+    font-size: 2rem !important;
+}
+.mt-resa{
+    margin-top: 6rem;
 }
 
 /* Réalisation */
@@ -229,3 +238,68 @@ a{
     padding: 0 !important;
 }
 }
+
+
+
+
+
+.card-menu {display: flex; height: 400px;width: 200px;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
+  
+  .card-menu:not(:first-child) { margin-left: -50px;}
+  
+  .card-menu:hover {transform: translateY(-20px);transition: 0.4s ease-out;}
+  
+  .card-menu:hover ~ .card-menu {position: relative;left: 50px; transition: 0.4s ease-out;}
+
+.date{margin-top: 6rem !important; position: absolute;left: 20px; font-size: 0.9rem; }
+
+.v{  text-shadow: 3px 3px rgb(0, 0, 0);  font-family: Brush Script MT, Brush Script Std, cursive;  font-size: 2.5rem !important; }  
+
+.title {text-shadow: 1.5px 1.5px #ea272d; font-family: Brush Script MT, Brush Script Std, cursive; color: white; font-weight: 300;font-size: 2.5rem; position: absolute; left: 20px; top: 15px; border-bottom: #ff0008 solid 1px;}
+  
+  .bar {position: absolute; top: 100px; left: 20px; height: 5px; width: 150px;}
+  
+  .fs-title-menu{
+      font-size: 2.5rem !important;
+  }
+  .emptybar { background-color: #2e3033; width: auto; height: 100%;}
+
+  .filledbar { position: absolute; top: 0px; z-index: 3; width: 0px; height: 100%; background: linear-gradient(90deg, rgb(247, 237, 238) 0%, rgb(170, 42, 42) 65%, rgb(71, 0, 0) 100%); transition: 0.6s ease-out;}
+  
+  .card-menu:hover .filledbar { width: 120px;transition: 0.4s ease-out;}
+  
+  .circle { position: absolute;top: 120px;left: 20px;line-height: normal;}
+  
+  .stroke {stroke: white;stroke-dasharray: 360;stroke-dashoffset: 360;transition: 0.6s ease-out; font-family: Brush Script MT, Brush Script Std, cursive;}
+  
+  svg { fill: #17141d; stroke-width: 2px;}
+  
+  .card-menu:hover .stroke {stroke-dashoffset: 100;transition: 0.6s ease-out;}
+
+/**** media queries ****/
+
+@media (max-width: 575.98px) { 
+  .card-menu {display: flex; height: 400px;width: 450px;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
+
+ 
+ }
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {     
+  .card-menu {display: flex; height: 400px;width: 450px;background-color: rgb(52,58,64);border-radius: 10px; box-shadow: -1rem 0 3rem #000; margin-left: -30px; transition: 0.4s ease-out;position: relative;left: 0px;}
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   
+ }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+ }
+
+@media (min-width: 1200px) { 
+
+ }
+

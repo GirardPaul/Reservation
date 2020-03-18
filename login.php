@@ -23,20 +23,10 @@ $user = new Connexion();
     if (isset($_POST['name']) && isset($_POST['password'])) {
 
       $query = $user->selectUser();
-      // cette requête permet de récupérer l'utilisateur depuis la BD
-      // $requete = "SELECT * FROM `users` WHERE `name`=? AND `password`=?";
-      // $resultat = $bdd->prepare($requete);
-      // $name = $_POST['name'];
-      // $_POST['password'] = MD5($_POST['password']);
-      // $resultat->execute([$name, $_POST['password']]);
-
-  
-      if ($query->fetch()) {
-          // l'utilisateur existe dans la table
-          // on ajoute ses infos en tant que variables de session
+      if ($query->fetch()){
           $_SESSION['name'] = $name;
           $_SESSION['password'] = MD5($password);
-          header("location: index.php");
+          header("location: admin.php");
       }
       else {
         echo "<h5>Identifiant incorrect, veuillez réessayer.</h5>";

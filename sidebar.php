@@ -4,7 +4,7 @@
         <div class="container">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white px-4" href="index.php">Accueil</a>
+                    <a class="nav-link text-white px-4" href="admin.php">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white px-4" href="insert.php">Ajouter un menu</a>

@@ -3,6 +3,12 @@ require_once('Connexion.php');
 require_once('database.php');
 require_once('Menu.php');
 
+if(empty($_SESSION["name"]) && empty($_SESSION["password"])) {
+
+    header("location: login.php");
+    exit;
+    }
+
 // Créer une nouvelle instance
 $newImg = new Menu();
 ?>

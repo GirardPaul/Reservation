@@ -44,12 +44,12 @@ $ajoutMenu = new Menu();
   <section>
         <!--  NavBar   -->
         <div class="navbar bg-dark">
-            <a href="#header">Accueil</a>
-            <a href="#presentation">La Chef</a>
-            <a href="#menu">Menu</a>
-            <a href="#offres">Offres</a>
+            <a href="index.php">Accueil</a>
+            <a href="index.php#presentation">La Chef</a>
+            <a href="index.php#menu">Menu</a>
+            <a href="index.php#offres">Offres</a>
             <a href="#">Réservation</a>
-            <a href="#contact">Contact</a>
+            <a href="index.php#contact">Contact</a>
         </div>
 
         <div class="outer-menu">
@@ -61,12 +61,12 @@ $ajoutMenu = new Menu();
               <div>
                 <div>
                   <ul>
-                    <li><a class="menu-b-link" href="#header">ACCUEIL</a></li>
-                    <li><a class="menu-b-link" href="#presentation">LA CHEF</a></li>
-                    <li><a class="menu-b-link" href="#menu">MENU</a></li>
-                    <li><a class="menu-b-link" href="#offres">OFFRES</a></li>
+                    <li><a class="menu-b-link" href="index.php">ACCUEIL</a></li>
+                    <li><a class="menu-b-link" href="index.php#presentation">LA CHEF</a></li>
+                    <li><a class="menu-b-link" href="index.php#menu">MENU</a></li>
+                    <li><a class="menu-b-link" href="index.php#offres">OFFRES</a></li>
                     <li><a class="menu-b-link" href="#">RESERVATION</a></li>
-                    <li><a class="menu-b-link" href="#contact">CONTACT</a></li>
+                    <li><a class="menu-b-link" href="index.php#contact">CONTACT</a></li>
                   </ul>
                 </div>
               </div>
@@ -79,7 +79,7 @@ $ajoutMenu = new Menu();
       <!-- Section: Block Content -->
       <section class="dark-grey-text">
 
-        <h3 class="text-center font-weight-bold mb-4 pb-2">Faites votre réservation de repas</h3>
+        <h3 class="text-center font-weight-bold mb-4 pb-2">Réservez vos repas !</h3>
         <!-- <p class="text-center text-muted w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p> -->
 
         <!-- Grid row -->
@@ -95,7 +95,7 @@ $ajoutMenu = new Menu();
 
           <!-- Grid column -->
           <div class="col-lg-7 d-flex">
-            <form action="" method="post">
+            <form action="traitement_resa.php" method="post">
 
 		<?php
 		  	$today = strftime("%Y-%m-%d", strtotime("now"));
