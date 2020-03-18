@@ -1,0 +1,18 @@
+input[type=text], input[type=date] {
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #ea272d;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    outline: none;
+}
+input[type=text]:active {
+    outline: none;
+}
+
+input[type=submit] {
+    border-radius: .25rem!important;
+    color: #fff;
+    background-color: #ea272d;
+    border-color: white;
+}

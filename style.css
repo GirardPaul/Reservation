@@ -4,9 +4,11 @@
 body{
     margin:0;
     font-size: 1rem;
+   
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth !important;
 }
 header{
     height: 100vh;
@@ -17,15 +19,47 @@ a{
     text-decoration: none !important;
 }
 
+    
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ea272d;
+    border: 31px none white;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+::-webkit-scrollbar-thumb:active {
+    background: white;
+}
+::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+    background: white;
+}
+::-webkit-scrollbar-track:active {
+    background: white;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
 
 
 
 /* Header */
 
 
-.mt-resa{
-    margin-top: 5rem !important;
-}
+
 .navbar {
   overflow: hidden;
   position: fixed !important;

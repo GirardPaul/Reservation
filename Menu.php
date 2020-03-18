@@ -91,4 +91,26 @@ class Menu extends Connexion {
         public function Delete(int $id){
             $query = $this->pdo->query("DELETE FROM menu WHERE id = $id");
         }
+          // Sélection des images actuelles
+          public function selectImg() {
+            $query = $this->pdo->query("SELECT * FROM img");
+            return $query;
+        }
+
+        // Update d'une image
+        public function updateImg(string $filename, string $image, string $img) {
+
+            $query = $this->pdo->query("UPDATE img SET name = '$filename', image = '$image' WHERE id = '$img'");
+        }
+
+        public function insertImg($filename, $image) {
+
+            $query = $this->pdo->query("INSERT INTO img (name, image) VALUES ('".$filename."', '".$image."')");
+        }
+
+        public function selectBy() {
+
+            $query = $this->pdo->query("SELECT * FROM img ORDER BY id");
+            return $query;
+        }
 }
