@@ -111,7 +111,7 @@ $img = new Menu();
                         10h avec nos offres Petits Déjeuner et dès midi pour nos offres repas. Ne perdez pas une minute
                         pour réserver.<br> A Bientôt."<br> Sylviane,<br>Chef Cuisinère.</p>
 
-                    <a class="btn_presentation mb-5 mb-lg-0 w-50 w-lg-25 btn btn-lg color-red" href="#info">INFO CAMPUS</a>
+                    <a class="btn_presentation mb-5 mb-lg-0 w-50 w-lg-25 btn btn-lg color-red" href="http://campus-numerique-lons.fr/">INFO CAMPUS</a>
 
                 </div>
 

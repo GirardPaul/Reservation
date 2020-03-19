@@ -198,9 +198,9 @@ a{
 .mt-resa{
     margin-top: 7rem !important;
 }
-.pb-submit{
-    padding-bottom: 2rem !important;
-}
+/* .pb-submit{
+    padding-bottom: 3rem !important;
+} */
 .center-resa{
     position: absolute !important;
     top: 40% !important;

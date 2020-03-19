@@ -36,6 +36,13 @@ $ajoutMenu = new Menu();
 .btn-blue-grey {
     color: #fff;
     background-color: #414141 !important;
+    font-size: 1.5rem !important;
+}
+th{
+  font-size: 1.5rem !important;
+}
+span{
+  font-size: 1.5rem !important;
 }
 .btn-blue-grey:hover {
     color: #fff !important;
@@ -47,7 +54,7 @@ input[type="text"]
     width: 100% !important;
     height: calc(1.5em + .75rem + 2px) !important;
     padding: .375rem .75rem !important;
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
     text-align: center !important;
     font-weight: 400 !important;
     line-height: 1.5 !important;
@@ -208,7 +215,7 @@ if(isset($_POST['azer'])){
                   echo $ajoutMenu->AddMenu('nom');
                   echo $ajoutMenu->AddMenu('prenom');
                   echo $ajoutMenu->AddMenu('mail'); 
-                  echo '<input class="w-auto form-control pb-submit btn btn-blue-grey" type="submit" value="Réserver">';
+                  echo '<input class="w-auto pb-5 form-control pb-submit btn btn-blue-grey" type="submit" value="Réserver">';
                 }
         ?>
   </form>
